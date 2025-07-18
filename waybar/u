@@ -1,0 +1,44 @@
+* {
+  font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", sans-serif;
+  font-size: 13px;
+  border: none;
+  padding: 0 6px;
+  margin: 0;
+  color: #e0e0e0;
+}
+
+window#waybar {
+  background: rgba(30, 30, 30, 0.8);
+  border-bottom: 1px solid #444;
+}
+
+#clock,
+#battery,
+#network,
+#bluetooth,
+#backlight,
+#custom-weather,
+#custom-power,
+#custom-memory,
+#custom-keybindhint,
+#hyprland-workspaces {
+  margin: 0 4px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #202020;
+}
+
+#hyprland-workspaces button {
+  padding: 2px 6px;
+  margin: 0 2px;
+  border-radius: 4px;
+  background: transparent;
+  color: #aaa;
+}
+#hyprland-workspaces button.active {
+  background: #444;
+  color: #ffffff;
+}
+#hyprland-workspaces button:hover {
+  background: #666;
+}

@@ -1,0 +1,80 @@
+{
+    "include": [
+        "/home/nestervear/.local/share/waybar/modules/wlr-taskbar.json",
+        "/home/nestervear/.local/share/waybar/modules/privacy.json",
+        "/home/nestervear/.local/share/waybar/modules/tray.json",
+        "/home/nestervear/.local/share/waybar/modules/wlr-taskbar#windows.json",
+        "/home/nestervear/.local/share/waybar/modules/image#wallpaper.json",
+        "/home/nestervear/.local/share/waybar/modules/wlr-taskbar.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/custom-gpuinfo.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/custom-updates.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/pulseaudio.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/mpris.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/privacy.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/memory.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/custom-cliphist.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/backlight.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/custom-dunst.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/custom-workflows.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/custom-gpuinfo#nvidia.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/custom-github_hyde.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/custom-weather.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/network#bandwidth.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/bluetooth.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/custom-display.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/cava.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/custom-swaync.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/custom-spotify.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/custom-clipboard.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/custom-gpuinfo#intel.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/network.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/battery.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/clock.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/custom-powermenu.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/tray.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/custom-hyde-menu.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/custom-cpuinfo.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/wlr-taskbar#windows.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/custom-sensorsinfo.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/cpu.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/custom-hyprsunset.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/custom-keybindhint.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/idle_inhibitor.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/hyprland-workspaces.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/hyprland-workspaces#kanji.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/custom-theme.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/hyprland-workspaces#roman.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/custom-gpuinfo#amd.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/custom-cava.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/hyprland-window.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/custom-power.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/pulseaudio#microphone.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/hyprland-language.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/custom-wallchange.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/custom-gamemode.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/image#profile.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/image#wallpaper.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/custom-wbar.jsonc",
+        "/home/nestervear/.local/share/waybar/modules/power-profiles-daemon.jsonc"
+    ],
+    "wlr/taskbar": {
+        "icon-size": 16,
+        "icon-size-multiplier": 1.6
+    },
+    "privacy": {
+        "icon-size": 10,
+        "icon-size-multiplier": 1
+    },
+    "tray": {
+        "icon-size": 16,
+        "icon-size-multiplier": 1.6
+    },
+    "wlr/taskbar#windows": {
+        "icon-size": 16,
+        "icon-size-multiplier": 1.6
+    },
+    "image#wallpaper": {
+        "size": 30,
+        "icon-size-multiplier": 3
+    }
+}

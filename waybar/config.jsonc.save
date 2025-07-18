@@ -1,0 +1,82 @@
+//  Waybar config – fusionado y depurado
+//  Mantiene "capas" (grupos) originales y corrige módulos problemáticos.
+//  Revise las líneas con TODO si necesita ajustar algo.
+{
+  // --- Barra ---------------------------------------------------------------
+  "layer": "top",
+  "output": ["*"],
+  "position": "top",
+  "mode": "dock",
+  "exclusive": true,
+  "passthrough": false,
+  "reload_style_on_change": true,
+
+  // --- Includes dinámicos --------------------------------------------------
+  "include": [
+    "$XDG_CONFIG_HOME/waybar/modules/*json*",
+    "$XDG_DATA_HOME/waybar/modules/*json*"
+  ],
+
+  // --- Capas / grupos visibles --------------------------------------------
+  "modules-left": ["group/leaf-inverse"],
+  "modules-center": ["group/pill#1", "group/pill-in#center", "group/pill#2"],
+  "modules-right": ["group/leaf"],
+
+  // --- Declaración de grupos ----------------------------------------------
+  "group/pill#2": {
+    "orientation": "inherit",
+    "modules": ["custom/hyprsunset", "idle_inhibitor"]
+  },
+  "group/pill#1": {
+    "orientation": "inherit",
+    "modules": ["custom/weather"]
+  },
+  "group/leaf-inverse": {
+    "orientation": "inherit",
+    "modules": ["hyprland/workspaces", "wlr/taskbar"]
+  },
+  "group/pill-in#center": {
+    "orientation": "inherit",
+    "modules": [
+      "keyboard-state",           // Requiere: sudo usermod -aG input $USER
+      "clock",
+      "custom/updates",
+      "custom/keybindhint",
+      "custom/gamemode"
+    ]
+  },
+  "group/leaf": {
+    "orientation": "inherit",
+    "modules": [
+      "privacy",                  // Descomente si tiene swaylock/wlogout instalados
+      "backlight",
+      "tray",
+      "network#bandwidthUpBytes",
+      "network#bandwidthDownBytes",
+      "custom/bluetooth",
+      "pulseaudio",
+      "pulseaudio#microphone",
+      {
+        "name": "battery",      // ⚡ Ajuste el parámetro "bat" a su batería real
+        "bat": "BAT0",          //   $ ls /sys/class/power_supply | grep BAT
+        "adapter": "AC",
+        "format": "{icon} {capacity}%",
+        "tooltip": true
+      },
+      "power-profiles-daemon",    // Instale p‑p‑d o comente esta línea
+      {
+        "name": "custom/gpuinfo",
+        "exec": "~/.local/lib/hyde/gpuinfo.sh 2>/dev/null",
+        "return-type": "json",
+        "interval": 30,
+        "tooltip": true
+      },
+      {
+        "name": "custom/cpuinfo",
+        "exec": "~/.local/lib/hyde/cpuinfo.sh 2>/dev/null",
+        "return-type": "json",
+        "interval": 10,
+        "tooltip": true
+      },
+      {
+        

@@ -1,0 +1,121 @@
+{
+  "layer": "top",
+  "style": "user-style.css",
+  "output": ["*"],
+  "position": "top",
+  "mode": "dock",
+  "exclusive": true,
+  "passthrough": false,
+  "reload_style_on_change": true,
+
+  "modules-left": ["hyprland/workspaces", "custom/spotify"],
+  "modules-center": ["clock", "custom/weather"],
+  "modules-right": [
+    "custom/volume",
+    "custom/memory",
+    "custom/bluetooth",
+    "custom/network",
+    "custom/brightness",
+    "battery",
+    "custom/power"
+  ],
+
+  
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+
+  "format-icons": {
+    "firefox": "",
+    "code": "󰨞",
+    "kitty": "",
+    "thunar": "",
+    "spotify": ""   
+  }
+},
+
+  "clock": {
+    "format": " {:%H:%M  %d-%m-%Y}"
+  },
+
+  
+  "custom/weather": {
+	  "exec": "~/.config/waybar/scripts/weather.sh",
+	  "interval": 600,
+	  "return-type": "text",
+	  "tooltip": false
+  },
+
+
+  "custom/memory": {
+    "exec": "free | awk '/Mem:/ { printf(\"%.1f GiB\", $3 / 1024 / 1024) }'",
+    "interval": 10,
+    "return-type": "text",
+    "tooltip": true
+  },  
+
+  "custom/bluetooth": {
+    "exec": "~/.config/waybar/scripts/bluetooth_status.sh",
+    "interval": 5,
+    "return-type": "json",
+    "tooltip": false
+  },
+
+  "custom/network": {
+    "exec": "~/.config/waybar/scripts/network_icons.sh",
+    "return-type": "json",
+    "interval": 5,
+    "tooltip": false
+  },
+ 
+  "custom/brightness": {
+    "format": " {}",
+    "interval": 5,
+    "exec": "~/.config/waybar/scripts/brightness.sh",
+    "return-type": "text",
+    "on-scroll-up": "brightnessctl set +5%",
+    "on-scroll-down": "brightnessctl set 5%-",
+    "tooltip": false
+  },
+
+
+  "battery": {
+    "format": "{icon}",
+    "tooltip": true,
+    "format-icons": ["", "", "", "", ""]
+  },
+
+
+  "custom/power": {
+   "exec": "echo ",
+   "tooltip": "Menú de energía",
+   "on-click": "~/.config/waybar/scripts/powermenu.sh",
+   "interval": 999999
+  },
+
+  "custom/spotify": {
+    "exec": "~/.config/waybar/scripts/spotify.sh",
+    "interval": 2,
+    "return-type": "text",
+    "format": "{}",
+    "escape": false,
+    "markup": "pango",
+    "on-click": "playerctl --player=spotify play-pause",
+    "on-scroll-up": "playerctl --player=spotify next",
+    "on-scroll-down": "playerctl --player=spotify previous"  
+  },
+
+  "custom/volume": {
+    "exec": "~/.config/waybar/scripts/volume.sh",
+    "interval": 1,
+    "return-type": "text",
+    "format": "{}",
+    "on-click": "pamixer -t",               // mute / unmute
+    "on-scroll-up": "pamixer -i 5",         // subir 5%
+    "on-scroll-down": "pamixer -d 5",       // bajar 5%
+    "tooltip": false
+  } 
+
+}

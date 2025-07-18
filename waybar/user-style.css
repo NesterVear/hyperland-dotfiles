@@ -1,0 +1,122 @@
+/* ========== GLOBAL STYLES ========== */
+*{
+  font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font", sans-serif;
+  font-size: 13px;
+  color: #e0e0e0;
+  border: none;
+  padding: 0 4px;
+  margin: 0;
+}
+
+/* ========== BAR CONTAINER ========== */
+window#waybar {
+  background: #222222;
+  border-bottom: 1px solid #444;
+  padding: 4px 8px;
+}
+
+/* ========== CENTER MODULES ========== */
+#clock {
+  padding: 0 10px;
+  font-size: 16px;
+}
+
+/* ========== POWER & MEMORY ========== */
+#custom-power,
+#custom-memory {
+  padding: 0 10px;
+  font-size: 16px;
+  color: #a6e3a1;
+}
+
+/* ========== WEATHER ========== */
+#custom-weather {
+  padding: 0 10px;
+  font-size: 16px;
+  color: #94e2d5;
+}
+
+/* ========== BRIGHTNESS ========== */
+#custom-brightness {
+  padding: 0 10px;
+  font-size: 16px;
+  color: #f9e2af;
+}
+
+/* ========== BATTERY ========== */
+#battery {
+  padding: 0 10px;
+  font-size: 16px;
+}
+
+/* ========== N
+ * ETWORK ========== */
+#custom-network {
+  padding: 0 10px;
+  font-size: 16px;
+}
+
+#custom-network.ethernet {
+  color: #8ec07c;
+}
+
+#custom-network.wifi-strong {
+  color: #88c0d0;
+}
+
+#custom-network.wifi-medium {
+  color: #ebcb8b;
+}
+
+#custom-network.wifi-weak {
+  color: #d08770;
+}
+
+#custom-network.wifi-bad {
+  color: #bf616a;
+}
+
+#custom-network.disconnected {
+  color: #5c5c5c;
+}
+
+/* ========== BLUETOOTH ========== */
+#custom-bluetooth {
+  padding: 0 10px;
+  font-size: 16px;
+}
+
+#custom-bluetooth.bt-on {
+  color: #4da6ff;
+}
+
+#custom-bluetooth.bt-off {
+  color: #666666;
+}
+
+/* ========== WORKSPACES ========== */
+#hyprland-workspaces {
+  background-color: #222222;
+  margin: 0 4px;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+#hyprland-workspaces button {
+  transition: background 0.2s ease, color 0.2s ease;  
+  padding: 2px 6px;
+  margin: 0 2px;
+  border-radius: 4px;
+  background: transparent;
+  color: #bbbbbb;
+}
+
+#hyprland-workspaces button.active {
+  background: #666;
+  color: #ffffff;
+}
+
+#hyprland-workspaces button:hover {
+  background: #888;
+}
+
